@@ -1,40 +1,44 @@
-function buySneaker(sneakerList) {
-    // Your code here
-    let result = {};
-  
-    for (let i = 0; i < sneakerList.length; i++) {
-      let sneaker = sneakerList[i];
-      console.log(sneaker['name']);
-      console.log(sneaker['type']);
+function filterSneaker(sneakerList) {
+  let result = {};
+
+  for (let i = 0; i < sneakerList.length; i++) {
+    let sneakerName = sneakerList[i]['name'];
+    let brandType = sneakerList[i]['brand'];
+    if (result[brandType] === undefined) {
+      result[brandType] = [];
+      result[brandType].push(sneakerName);
+    } else {
+      result[brandType].push(sneakerName);
     }
-    return result;
   }
+  return result;
+}
   
   var sneakerList = [
     {
       name: 'Air Jordan 1 Retro High OG Dark Mocha',
-      type: 'Nike'
+      brand: 'Nike'
     },
     {
       name: 'Air Jordan 1 Retro High OG Purple Court',
-      type: 'Nike'
+      brand: 'Nike'
     },
     {
       name: 'Air Jordan 1 Retro High OG University Blue',
-      type: 'Nike'
+      brand: 'Nike'
     },
     {
       name: 'Yeezy Boost 350 V2 Zyon',
-      type: 'Adidas'
+      brand: 'Adidas'
     },
     {
       name: 'Yeezy Boost 350 V2 Static',
-      type: 'Adidas'
+      brand: 'Adidas'
     },
     {
-      nama: 'Yeezy Boost 700 Wave Runner',
-      type: 'Adidas',
+      name: 'Yeezy Boost 700 Wave Runner',
+      brand: 'Adidas'
     }
   ];
 
-  console.log(buySneaker(sneakerList));
+  console.log(filterSneaker(sneakerList));
