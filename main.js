@@ -4,7 +4,7 @@ let sneakerList = [
       brand: 'Nike',
       stock: 5,
       price: 6500000,
-      img: 'assets/sneakers_nike.jpg',
+      img: 'assets/1.png',
       id: 1
     },
     {
@@ -12,7 +12,7 @@ let sneakerList = [
       brand: 'Nike',
       stock: 7,
       price: 4500000,
-      img: 'assets/sneakers_nike.jpg',
+      img: 'assets/2.png',
       id: 2
     },
     {
@@ -20,7 +20,7 @@ let sneakerList = [
       brand: 'Nike',
       stock: 12,
       price: 5400000,
-      img: 'assets/sneakers_nike.jpg',
+      img: 'assets/3.png',
       id: 3
     },
     {
@@ -28,7 +28,7 @@ let sneakerList = [
       brand: 'Adidas',
       stock: 7,
       price: 3599000,
-      img: 'assets/sneakers_nike.jpg',
+      img: 'assets/4.png',
       id: 4
     },
     {
@@ -36,7 +36,7 @@ let sneakerList = [
       brand: 'Adidas',
       stock: 3,
       price: 3700000,
-      img: 'assets/sneakers_nike.jpg',
+      img: 'assets/5.png',
       id: 5
     },
     {
@@ -44,7 +44,7 @@ let sneakerList = [
       brand: 'Adidas',
       stock: 5,
       price: 4700000,
-      img: 'assets/sneakers_nike.jpg',
+      img: 'assets/6.png',
       id: 6
     }
   ];
@@ -57,7 +57,7 @@ let sneakerList = [
       let result = ''
       for (let i = 0; i < data.length; i++) {
           result += `<div class="card" style="width: 18rem;">
-          <img src="/assets/sneakers_nike.jpg" class="card-img-top" alt="...">
+          <img src="${data[i].img}" class="card-img-top" alt="...">
           <div class="card-body">
           <span class="badge badge-warning">${data[i].brand}</span>
           <h5 class="card-title product-card-name font-weight-bold">${data[i].name}</h5>
