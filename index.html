@@ -22,6 +22,7 @@
     <title>SEPOKAT!</title>
   </head>
   <body>
+
     <!-- LANDING PAGE SECTION -->
     <div id="landingPage">
       <!-- Navbar -->
@@ -141,7 +142,7 @@
                             <a class="nav-link" href="#landingPage">Home<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Product</a>
+                            <a class="nav-link" href="#" >Product</a>
                         </li>
                         <li class="ml-2 nav-item">
                             <!-- Cart button and Cart Modal -->
@@ -156,25 +157,21 @@
                                       </button>
                                     </div>
                                     <div class="modal-body">
-                                        <table class="table table-borderless">
+                                        <table id="cartTable" class="table table-borderless">
                                             <thead>
                                               <tr>
-                                                <th scope="col"></th>
-                                                <th scope="col" style="font-size: 1.5rem;">Product</th>
-                                                <th scope="col"></th>
+                                                <th id="col-cart-img" scope="col"></th>
+                                                <th id="col-cart-info" scope="col" style="font-size: 1.5rem;">Product</th>
+                                                <th id="col-btn-delete-cart" scope="col"></th>
                                               </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td scope="row" class="product-cart-img"><img src="/assets/sneakers_nike.jpg" alt="" style="width: 120px; height: 70px;"></td>
-                                                    <td class="product-cart-info">
-                                                        <h5 class="product-cart-name font-weight-bold" style="margin-bottom: 0;">Nike Air Jordan</h5>
-                                                        <p class="product-cart-price" style="margin-bottom: 0;">$2000</p>
-                                                        <p class="product-cart-qty">Qty: 1</p>
-                                                    </td>
-                                                    <td class="btn-cart-delete"><button class="btn btn-danger">&times;</button></td>
+                                                    <td scope="row" id="productCartImgBody" class="product-cart-img"></td>
+                                                    <td scope="row" class="product-cart-info" id="productCartInfoBody"></td>
+                                                    <td scope="row" class="btn-cart-delete" id="productCartBtnDelBody"></td>
                                                 </tr>
-                                                <tr>
+                                                <!-- <tr>
                                                     <td scope="row" class="product-cart-img"><img src="/assets/sneakers_nike.jpg" alt="" style="width: 120px; height: 70px;"></td>
                                                     <td class="product-cart-info">
                                                         <h5 class="product-cart-name font-weight-bold" style="margin-bottom: 0;">Nike Air Jordan</h5>
@@ -200,7 +197,7 @@
                                                     <p class="product-cart-qty">Qty: 3</p>
                                                 </td>
                                                 <td class="btn-cart-delete"><button class="btn btn-danger">&times;</button></td>
-                                            </tr>
+                                            </tr> -->
                                             </tbody>
                                           </table>
                                     </div>
@@ -225,8 +222,8 @@
                     <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
                     </p>
                 </div> -->
-            <div class="mt-5 d-flex flex-wrap product-catalog justify-content-center">
-                <div class="card" style="width: 18rem;">
+            <div id="content" class="mt-5 d-flex flex-wrap product-catalog justify-content-center">
+                <!-- <div class="card" style="width: 18rem;">
                     <img src="/assets/sneakers_nike.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <span class="badge badge-warning">Nike</span>
@@ -333,17 +330,23 @@
                       <a href="#" class="btn btn-success btn-addToCart">Add to cart</a>
                   </span>
               </div>
-          </div>
+          </div> -->
             </div>
         </div>
       </div>
     <!-- END PRODUCT PAGE SECTION  -->
+
+
+
+    <!-- CHECKOUT SECTION -->
+    <!-- END CHECKOUT SECTION -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/main.js"></script>
   </body>
 </html>
 
