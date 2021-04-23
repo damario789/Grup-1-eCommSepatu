@@ -14,22 +14,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="/style.css">
-    <title>Sneakers</title>
+    <title>SEPOKAT!</title>
 </head>
 
 <body>
     <!-- Nav section -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" id="logo" href="#">LOGO HERE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+            <a class="navbar-brand" id="logo" href="#">SEPOKAT!</a>
+            <button class="navbar-toggler border-dark" type="button" data-toggle="collapse" data-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars" style="font-size: 1.2em;"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <form class="d-flex ml-lg-5">
-                    <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search" style="width: 30rem;">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input id="search-bar" class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="btn-search" class="btn btn-dark" type="submit">Search</button>
                 </form>
                 <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll ml-auto" style="max-height: 100px; ">
                     <li class="nav-item active">
@@ -38,17 +38,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Product</a>
                     </li>
-                    <li class="ml-3 nav-item">
-                        
+                    <li class="ml-2 nav-item">
                         <!-- Cart button and Cart Modal -->
                         <button id="btn-cart" type="button" data-toggle="modal" data-target="#contohModal"><i class="fas fa-shopping-cart"></i></button>
                         <div class="modal fade" id="contohModal" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                               <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title">My Cart</h5>
+                                <div class="modal-header text-center">
+                                  <h5 class="modal-title w-100 cart-title">My Cart</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
+                                      <span aria-hidden="true" style="color: black;">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
@@ -56,7 +55,7 @@
                                         <thead>
                                           <tr>
                                             <th scope="col"></th>
-                                            <th scope="col">Product</th>
+                                            <th scope="col" style="font-size: 1.5rem;">Product</th>
                                             <th scope="col"></th>
                                           </tr>
                                         </thead>
@@ -79,11 +78,29 @@
                                                 </td>
                                                 <td class="btn-cart-delete"><button class="btn btn-danger">&times;</button></td>
                                             </tr>
+                                            <tr>
+                                              <td scope="row" class="product-cart-img"><img src="/assets/sneakers_nike.jpg" alt="" style="width: 120px; height: 70px;"></td>
+                                              <td class="product-cart-info">
+                                                  <h5 class="product-cart-name font-weight-bold" style="margin-bottom: 0;">Nike Air Jordan</h5>
+                                                  <p class="product-cart-price" style="margin-bottom: 0;">$2000</p>
+                                                  <p class="product-cart-qty">Qty: 3</p>
+                                              </td>
+                                              <td class="btn-cart-delete"><button class="btn btn-danger">&times;</button></td>
+                                          </tr>
+                                          <tr>
+                                            <td scope="row" class="product-cart-img"><img src="/assets/sneakers_nike.jpg" alt="" style="width: 120px; height: 70px;"></td>
+                                            <td class="product-cart-info">
+                                                <h5 class="product-cart-name font-weight-bold" style="margin-bottom: 0;">Nike Air Jordan</h5>
+                                                <p class="product-cart-price" style="margin-bottom: 0;">$2000</p>
+                                                <p class="product-cart-qty">Qty: 3</p>
+                                            </td>
+                                            <td class="btn-cart-delete"><button class="btn btn-danger">&times;</button></td>
+                                        </tr>
                                         </tbody>
                                       </table>
                                 </div>
                                 <div class="d-flex justify-content-center modal-footer">
-                                    <button id="btn-checkout" class="btn btn-success">Checkout</button>
+                                    <button id="btn-checkout" class="btn btn-warning font-weight-bold">Checkout</button>
                                     <button id="btn-cancel" class="btn btn-danger" style="opacity: 60%;">Cancel</button>
                                 </div>
                               </div>
@@ -92,19 +109,17 @@
                     </li>
                 </ul>
             </div>
-            <a id="user-login" href="#">Jhon Doe</a>
+            <!-- <a id="user-login" href="#" style="text-decoration: none;">Jhon Doe</a> -->
         </div>
     </nav>
 
     <!-- Catalog Section -->
     <div class="container">
-        <div class="product-page">
-            <div class="mt-lg-4 jumbotron jumbotron-fluid" style="border-radius: 20px;">
+            <div class="mt-4 jumbotron jumbotron-fluid" style="border-radius: 20px;">
                 <h1 class="display-4">Ads Here</h1>
                 <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
                 </p>
             </div>
-        </div>
         <div class="d-flex flex-wrap product-catalog justify-content-center">
             <div class="card" style="width: 18rem;">
                 <img src="/assets/sneakers_nike.jpg" class="card-img-top" alt="...">
@@ -114,7 +129,7 @@
                     <p class="product-card-price">Price: $2000</p>
                     <p class="product-card-stock">Stock: 40</p>
                     <span class="d-inline-block" style="width: 100%; text-align: right;">
-                        <a href="#" class="btn btn-success btn-addToCart">Add to cart</a>
+                        <a href="#" class="btn btn-success btn-addToCart">Add to cart</a> 
                     </span>
                 </div>
             </div>
@@ -178,12 +193,45 @@
                     </span>
                 </div>
             </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/assets/sneakers_nike.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                  <span class="badge badge-warning">Nike</span>
+                  <h5 class="card-title product-card-name font-weight-bold">Nike Air Jordan</h5>
+                  <p class="product-card-price">Price: $2000</p>
+                  <p class="product-card-stock">Stock: 40</p>
+                  <span class="d-inline-block" style="width: 100%; text-align: right;">
+                      <a href="#" class="btn btn-success btn-addToCart">Add to cart</a>
+                  </span>
+              </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="/assets/sneakers_nike.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <span class="badge badge-warning">Nike</span>
+                <h5 class="card-title product-card-name font-weight-bold">Nike Air Jordan</h5>
+                <p class="product-card-price">Price: $2000</p>
+                <p class="product-card-stock">Stock: 40</p>
+                <span class="d-inline-block" style="width: 100%; text-align: right;">
+                    <a href="#" class="btn btn-success btn-addToCart">Add to cart</a>
+                </span>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="/assets/sneakers_nike.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+              <span class="badge badge-warning">Nike</span>
+              <h5 class="card-title product-card-name font-weight-bold">Nike Air Jordan</h5>
+              <p class="product-card-price">Price: $2000</p>
+              <p class="product-card-stock">Stock: 40</p>
+              <span class="d-inline-block" style="width: 100%; text-align: right;">
+                  <a href="#" class="btn btn-success btn-addToCart">Add to cart</a>
+              </span>
+          </div>
+      </div>
         </div>
     </div>
     </div>
-
-
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
